@@ -174,3 +174,14 @@ h3 { font-size: 24px;}
 .icons-section {
     padding: 80px;
 }
+.icon-set-snapshot-image {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+    
+/* All for the feather icons link */
+
+    .feather-icons-link {
+    color: #1a1a1a;
+    font-weight: 700;
+}
