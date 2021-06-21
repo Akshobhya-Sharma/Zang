@@ -3,6 +3,7 @@
     margin-left: 200px;
     padding: 60px 20px 60px 20px;
     height: 100vh;
+    overflow: hidden;
 }
 .caption-text {
     font-size: 14px;
@@ -73,6 +74,8 @@ hr.solid {
     top: 32px;
     left: auto;
     right: 32px;
+    background-color: rgba(229, 229, 229, 0.4);
+    padding: 16px;
 }
 
 /* Main Content properties here */
