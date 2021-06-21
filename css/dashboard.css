@@ -1,0 +1,143 @@
+/* Something universal */
+.content-is-all-here {
+    margin-left: 200px;
+    padding: 60px 20px 60px 20px;
+    height: 100vh;
+}
+.caption-text {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+/* Solid border */
+hr.solid {
+    border-top: 2px solid #4a4a4a;
+  }
+
+/* All side nav related CSS */
+
+.side-nav-custom {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.side-nav-custom a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    transition: 0.3s;
+    font-family: 'Comfortaa';
+    display: block;
+  }
+.side-nav-custom a:active {
+    background-color: #3C64B1;
+    color: #f9f9f9;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .side-nav-custom a:hover {
+    color: #f1f1f1;
+  }
+
+  /* This is the logo on the side nav */
+.sidenav-logo {
+    width: 64px;
+    margin-top: 2%;
+}
+/* This is for any other icon file */
+.icon-of-size {
+    width: 32px;
+    height: 32px;
+}
+
+/* This is side nav bottom links like settings and logout */
+.sidenav-bottom-cta {
+    margin-bottom: 2%;
+}
+
+/* All top nav related css */
+
+.top-nav-custom {
+    position: fixed;
+    top: 32px;
+    left: auto;
+    right: 32px;
+}
+
+/* Main Content properties here */
+
+/* home properties */
+.dashboard-home-tab {
+    padding: 40px;
+}
+
+.integrate-icons-group {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+}
+.set-office-hours {
+    display: block;
+}
+.icons-and-office {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24px;
+    padding-right: 64px;
+}
+.world-map-container {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 32px;
+    padding: 64px;
+    justify-items: center;
+    align-items: center;
+    box-shadow: 8px 8px 24px 4px #cacaca;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+
+
+
+
+
+/* Making sidenav responsive */
+
+@media screen and (max-width: 700px) {
+    .side-nav-custom {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+        justify-content: center;
+    }
+    .side-nav-custom a {
+        float: left;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .side-nav-custom a{
+        text-align: center;
+        float: none;
+        font-size: 16px;
+
+    }
+}
