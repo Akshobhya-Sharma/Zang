@@ -153,6 +153,7 @@ h3 { font-size: 24px;}
 .btn-primary {
     background-color: #1a1a1a;
     border-color: transparent;
+    margin-right: 24px;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
@@ -162,6 +163,7 @@ h3 { font-size: 24px;}
 .btn-outline-secondary {
     border-color: #1a1a1a;
     color: #1a1a1a;
+    margin-right: 24px;
 }
 .btn-outline-secondary:hover {
     background-color: #CACACA;
