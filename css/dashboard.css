@@ -1,9 +1,6 @@
 /* Something universal */
 .content-is-all-here {
     margin-left: 200px;
-    padding: 60px 20px 60px 20px;
-    height: 100vh;
-    overflow: hidden;
 }
 .caption-text {
     font-size: 14px;
@@ -11,6 +8,30 @@
     font-weight: bold;
     color: #4a4a4a;
 }
+.btn-primary {
+    background-color: #1a1a1a;
+    color: #f9f9f9;
+    font-family: 'Comfortaa';
+    margin-right: 24px;
+}
+.btn-secondary {
+    border: 2px solid #1a1a1a;
+    background-color: transparent;
+    color: #1a1a1a;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    margin-right: 24px;
+}
+.btn-success {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+.active-side-nav {
+    background: #3C64B1;
+    border-radius: 4px;
+    color: #f9f9f9 !important;
+}
+
 /* Solid border */
 hr.solid {
     border-top: 2px solid #4a4a4a;
@@ -33,7 +54,7 @@ hr.solid {
     justify-content: space-between;
 }
 .side-nav-custom a {
-    padding: 8px 8px 8px 32px;
+    padding: 16px 16px 16px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -41,15 +62,14 @@ hr.solid {
     font-family: 'Comfortaa';
     display: block;
   }
-.side-nav-custom a:active {
-    background-color: #3C64B1;
-    color: #f9f9f9;
-}
+
   
   /* When you mouse over the navigation links, change their color */
   .side-nav-custom a:hover {
     color: #f1f1f1;
   }
+
+
 
   /* This is the logo on the side nav */
 .sidenav-logo {
@@ -58,8 +78,10 @@ hr.solid {
 }
 /* This is for any other icon file */
 .icon-of-size {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 /* This is side nav bottom links like settings and logout */
@@ -80,43 +102,56 @@ hr.solid {
 
 /* Main Content properties here */
 
-/* home properties */
+/* sectional properties */
 .dashboard-home-tab {
     padding: 40px;
+    height: 100%;
+}
+.slack-home-tab {
+    padding: 40px;
+    height: 100vh;
+    background: #2B092A;
+}
+.gcalendar-home-tab {
+    padding: 40px;
+    height: 100vh;
+    background: #4285F4;
 }
 
-.integrate-icons-group {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    display: inline-grid;
-    grid-template-columns: auto auto auto auto;
-    grid-column-gap: 32px;
-    grid-row-gap: 32px;
+
+/* Things about the integration cards */
+.integration-card-header {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
 }
-.set-office-hours {
-    display: block;
+.integration-card {
+    width: 100% auto;
+    padding: 24px;
+    border: 2px solid #DCDCDC;
+    box-shadow: 8px 8px 12px rgba(52, 52, 52, 0.2);
+    border-radius: 8px;
 }
-.icons-and-office {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 24px;
-    padding-right: 64px;
+.integration-card-info {
+    margin-left: 24px;
+    margin-right: 24px;
 }
-.world-map-container {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 32px;
-    padding: 64px;
+
+.integration-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 40px !important;
+    padding-left: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     justify-items: center;
     align-items: center;
-    box-shadow: 8px 8px 24px 4px #cacaca;
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 12px;
 }
-
-
-
 
 
 

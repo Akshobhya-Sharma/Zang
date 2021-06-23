@@ -15,68 +15,120 @@
     <!-- Creating the custom side nav -->
     <div class="side-nav-custom">
         <a href="index.html"><img src="images/zang-logo-light.png" alt="zang logo light" class="sidenav-logo"></a>
-        <div>
-        <a href="#">Home</a>
-        <a href="#">Slack</a>
-        <a href="#">G-Calendar</a>
-        <a href="#">M-Teams</a>
-        <a href="#">G-Meet</a>
-        <a href="#">Zoom</a>
+        <div class="side-nav-link-container">
+        <a href="#" id="nav-link-home" class="side-nav-link active-side-nav" onclick="toggleNavbarActive(this)">Home</a>
+        <a href="#slack-home-tab" class="side-nav-link" onclick="toggleNavbarActive(this)">Slack</a>
+        <a href="#gcalendar-home-tab" onclick="toggleNavbarActive(this)">G-Calendar</a>
+        <a href="#" onclick="toggleNavbarActive(this)">M-Teams</a>
+        <a href="#" onclick="toggleNavbarActive(this)">G-Meet</a>
+        <a href="#" onclick="toggleNavbarActive(this)">Zoom</a>
         </div>
         <div class="sidenav-bottom-cta">
             <a href="#">Settings</a>
-            <a href="#">Logout</a>
+            <a href="index.html" style="color: #FF2424;">Logout</a>
         </div>
     </div>
     <!-- Creating custom top nav -->
     <div class="top-nav-custom">
-        <a href="" style="margin-right: 16px;">AB</a>
-        <a href="" style="margin-right: 16px;">CD</a>
+        <a href="" style="margin-right: 16px;"><img src="images/email notification.png" alt="Emails" class="icons-of-size"></a>
+        <a href="" style="margin-right: 16px;"><img src="images/notification.png" alt="Notification" class="icons-of-size"></a>
         <a href="" style="margin-right: 16px;"><img src="https://source.unsplash.com/random" alt="Random photos" class="icon-of-size"></a>
     </div>
 
     <!-- Creating the core body of the dashboard -->
 <div class="content-is-all-here">
     <!-- The Home section -->
-    <section class="dashboard-home-tab">
+    <section class="dashboard-home-tab" id="dashboard-home-tab">
         <h1>Hi, Catherine</h1>
         <p>This is your dashboard. Right now it’s empty, but don’t worry, we’ll fill it up soon! You can begin by integrating with the following applications.</p>
-        <div class="icons-and-office">
-            <div class="integrate-icons-group">
-                <a href=""><img src="images/integration-icons/1024px-Google_Calendar_icon_(2020) 1.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/1024px-Google_Meet_icon_(2020) 1.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/calendly.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/Group 1236.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/Group 1237.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/Group.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/Microsoft_Office_Teams_(2018–present) 1.png" alt="" class="grid-item icons-of-size"></a>
-                <a href=""><img src="images/integration-icons/notion-logo-1 1.png" alt="" class="grid-item icons-of-size"></a>
-            </div>
-            <div class="set-office-hours">
-                <h3 class="grid-item">Set Office Hours</h3>
-                <hr class="solid">
-                <p class="caption-text">From and To</p>
-                <input class="form-control" type="time" placeholder="From and To" aria-label="time input example">
-            </div>
+        <div class="dashboard-home-cta">
+            <button type="button" class="btn btn-primary">Add Team</button>
+            <button type="button" class="btn btn-secondary">Set Work Hours</button>
         </div>
-        <div class="world-map-container">
-            <div class="grid-item world-map-content">
-                <p>Sync your Golden Hours with your client's schedule</p>
-                <h2 style="color: #3C64B1;">2 people are available.</h2>
+        <div class="integration-container">
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/slack.png" alt="Slack Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Slack</h4>
+                    <a href=""><img src="images/settings.png" alt="Settings icon" style="margin-left: auto;"></a>
+                    <button type="button" class="btn btn-success" style="margin-left: 12px;">Connected</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>Zang commands will be enabled in slack chats. You can type /zang help for more information.</p>
+                </div>
             </div>
-            <div class="grid-items">
-                <img src="images/world-map.png" alt="World maps and location">
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/teams.png" alt="MTeams Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Microsoft Teams</h4>
+                    <button type="button" class="btn btn-primary">Connect</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>Enable Zang with Microsoft teams to integrate the application directly into your workflow.</p>
+                </div>
+            </div>
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/g calendar.png" alt="GCalendar Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Google Calendar</h4>
+                    <a href=""><img src="images/settings.png" alt="Settings icon" style="margin-left: auto;"></a>
+                    <button type="button" class="btn btn-success" style="margin-left: 12px;">Connected</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>Integrate with one of web’s most popular calendars bringing the power of Zang and Google Calendar together.</p>
+                </div>
+            </div>
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/notion.png" alt="Notion Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Notion</h4>
+                    <a href=""><img src="images/settings.png" alt="Settings icon" style="margin-left: auto;"></a>
+                    <button type="button" class="btn btn-success" style="margin-left: 12px;">Connected</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>With a powerful integration for Notion, Zang helps teams understand what time works best for everyone.</p>
+                </div>
+            </div>
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/g meet.png" alt="GMeet Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Google Meet</h4>
+                    <button type="button" class="btn btn-primary">Connect</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>Get access to Zang while on call with your team or clients. Quickly understand what times are best to coordinate your work.</p>
+                </div>
+            </div>
+            <div class="integration-card grid-items">
+                <div class="integration-card-header">
+                    <img src="images/integration-icons/trello.png" alt="Trello Logo" style="margin-right: 12px;">
+                    <h4 style="margin-right: auto;">Trello</h4>
+                    <a href=""><img src="images/settings.png" alt="Settings icon" style="margin-left: auto;"></a>
+                    <button type="button" class="btn btn-success" style="margin-left: 12px;">Connected</button>
+                </div>
+                <div class="integration-card-info"> 
+                    <p>Get Zang into your project management system to best understand what times work and what times are a no-go.</p>
+                </div>
             </div>
         </div>
     </section> 
     
-    
+    <section class="slack-home-tab" id="slack-home-tab">
+        <h1 style="color: #f9f9f9;">Welcome to Slack</h1>
+        <img src="images/slack-mockup.png" alt="Slack Mockup">
+    </section>
+
+    <section class="gcalendar-home-tab" id="gcalendar-home-tab">
+        <h1 style="color: #f9f9f9;">Welcome to Google Calendar</h1>
+        <img src="images/gcalendar.png" alt="Slack Mockup">
+    </section>
+
 
 
 
 </div>
     <!-- The scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+    <script src="dashboard.js"></script>
 </body>
 </html>
