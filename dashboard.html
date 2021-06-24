@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Hotjar Tracking Code for https://akshobhya-sharma.github.io/zang-dev-folder/dashboard.html# -->
+    <!-- Hotjar Tracking Code for https://akshobhya-sharma.github.io/zang-dev-folder/dashboard.html# -->
     <script>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -27,20 +29,39 @@
 <body>
     <!-- Creating the custom side nav -->
     <div class="side-nav-custom">
-        <a href="index.html"><img src="images/logo-new.png" alt="zang logo light" class="sidenav-logo"></a>
-        <div class="side-nav-link-container">
-            <a href="#" id="nav-link-home" class="side-nav-link active-side-nav" onclick="toggleNavbarActive(this)">Home</a>
-            <a href="#slack-home-tab" class="side-nav-link" onclick="toggleNavbarActive(this)">Slack</a>
-            <a href="#gcalendar-home-tab" onclick="toggleNavbarActive(this)">G-Calendar</a>
-            <a href="#" onclick="toggleNavbarActive(this)">M-Teams</a>
-            <a href="#" onclick="toggleNavbarActive(this)">G-Meet</a>
-            <a href="#" onclick="toggleNavbarActive(this)">Zoom</a>
-        </div>
-        <div class="sidenav-bottom-cta">
-            <a href="#">Settings</a>
-            <a href="index.html" style="color: #FF2424;">Logout</a>
-        </div>
+            <a href="index.html"><img src="images/logo-new.png" alt="zang logo light" class="sidenav-logo"></a>
+            <div class="side-nav-link-container">
+                <a href="#" id="nav-link-home" class="side-nav-link active-side-nav" onclick="toggleNavbarActive(this)">Home</a>
+                <a href="#slack-home-tab" class="side-nav-link" onclick="toggleNavbarActive(this)">Slack</a>
+                <a href="#gcalendar-home-tab" onclick="toggleNavbarActive(this)">G-Calendar</a>
+                <a href="#" onclick="toggleNavbarActive(this)">M-Teams</a>
+                <a href="#" onclick="toggleNavbarActive(this)">G-Meet</a>
+                <a href="#" onclick="toggleNavbarActive(this)">Zoom</a>
+            </div>
+            <div class="sidenav-bottom-cta">
+                <a href="#">Settings</a>
+                <a href="index.html" style="color: #FF2424;">Logout</a>
+            </div>
+
     </div>
+
+    <!-- Navigation for mobile - top nav -->
+<!-- Top Navigation Menu -->
+<div class="topnav">
+    <a href="index.html"><img src="images/logo-new.png" alt="" style="height: 40px;"></a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#dashboard-home-tab">Home</a>
+        <a href="#slack-home-tab" >Slack</a>
+        <a href="#gcalendar-home-tab" >G-Calendar</a>
+
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
     <!-- Creating custom top nav -->
     <div class="top-nav-custom">
         <a href="" style="margin-right: 16px;"><img src="images/email notification.png" alt="Emails" class="icons-of-size"></a>

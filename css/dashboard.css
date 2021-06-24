@@ -1,6 +1,9 @@
 /* Something universal */
 .content-is-all-here {
     margin-left: 200px;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
 }
 .caption-text {
     font-size: 14px;
@@ -30,6 +33,9 @@
     background: #3C64B1;
     border-radius: 4px;
     color: #f9f9f9 !important;
+}
+.topnav {
+    display: none;
 }
 
 /* Solid border */
@@ -140,6 +146,7 @@ hr.solid {
 
 .integration-container {
     display: grid;
+    grid-auto-flow: row;
     grid-template-columns: auto auto;
     grid-column-gap: 24px;
     grid-row-gap: 40px !important;
@@ -158,17 +165,74 @@ hr.solid {
 /* Making sidenav responsive */
 
 @media screen and (max-width: 700px) {
-    .side-nav-custom {
-        width: 100%;
-        height: auto;
-        position: relative;
-        display: inline-block;
-        justify-content: center;
-    }
     .side-nav-custom a {
         float: left;
         font-size: 16px;
     }
+    .integration-container {
+    display: flex;
+    flex-direction: column;
+    }
+    .content-is-all-here {
+        margin-left: 0;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    /* Shit I have to do for mobile navigation */
+    .side-nav-custom {
+        display: none;
+    }
+    .top-nav-custom {
+        display: none;
+    }
+
+    /* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #1a1a1a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #3C64B1;
+    color  : #f9f9f9;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    color: white;
+    background-color: #3C64B1;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -178,4 +242,74 @@ hr.solid {
         font-size: 16px;
 
     }
+    .side-nav-custom {
+        display: none;
+    }
+
+    .integration-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-is-all-here {
+            margin-left: 0;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+    }
+    .side-nav-link-container {
+        display: none;
+    }
+    .sidenav-bottom-cta {
+        display: none;
+    }
+    .top-nav-custom {
+        display: none;
+    }
+
+    /* Shit I have to do for mobile navigation */
+    /* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #1a1a1a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #3C64B1;
+    color: #f9f9f9;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #3C64B1;
+    color: white;
+  }
 }
