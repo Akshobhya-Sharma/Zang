@@ -112,8 +112,14 @@ hr.solid {
 .dashboard-home-tab {
     padding: 40px;
     height: 100vh; 
-    overflow: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
 }
+.dashboard-home-tab::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
 .slack-home-tab {
     padding: 40px;
     height: 100vh;
