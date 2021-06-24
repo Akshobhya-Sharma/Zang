@@ -111,16 +111,17 @@ hr.solid {
 /* sectional properties */
 .dashboard-home-tab {
     padding: 40px;
-    height: 100%;
+    height: 100vh; 
+    overflow: auto;
 }
 .slack-home-tab {
     padding: 40px;
-    height: 100%;
+    height: 100vh;
     background: #2B092A;
 }
 .gcalendar-home-tab {
     padding: 40px;
-    height: 100%;
+    height: 100vh;
     background: #4285F4;
 }
 
