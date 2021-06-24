@@ -191,3 +191,45 @@ h3 { font-size: 24px;}
     color: #1a1a1a;
     font-weight: 700;
 }
+
+/* Making elements responsive */
+
+@media screen and (max-width: 700px) {
+    .color-wrapper-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        margin-bottom: 24px;
+    }
+    .toHide {
+        display: none;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .color-wrapper-1 {
+        display: flex;
+        flex-direction: column;
+    }
+    .card {
+        margin-bottom: 24px;
+    }
+    .toHide {
+        display: none;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        margin-bottom: 24px;
+    }    
+}
