@@ -1,0 +1,320 @@
+/* Something universal */
+.content-is-all-here {
+    margin-left: 200px;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.caption-text {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+.btn-primary {
+    background-color: #1a1a1a;
+    color: #f9f9f9;
+    font-family: 'Comfortaa';
+    margin-right: 24px;
+}
+.btn-secondary {
+    border: 2px solid #1a1a1a;
+    background-color: transparent;
+    color: #1a1a1a;
+    font-family: 'Comfortaa';
+    font-weight: bold;
+    margin-right: 24px;
+}
+.btn-success {
+    font-family: 'Comfortaa';
+    font-weight: bold;
+}
+.active-side-nav {
+    background: #3C64B1;
+    border-radius: 4px;
+    color: #f9f9f9 !important;
+}
+.topnav {
+    display: none;
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 2px solid #4a4a4a;
+  }
+
+/* All side nav related CSS */
+
+.side-nav-custom {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.side-nav-custom a {
+    padding: 16px 16px 16px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    transition: 0.3s;
+    font-family: 'Comfortaa';
+    display: block;
+  }
+
+  
+  /* When you mouse over the navigation links, change their color */
+  .side-nav-custom a:hover {
+    color: #f1f1f1;
+  }
+
+
+
+  /* This is the logo on the side nav */
+.sidenav-logo {
+    width: 80px;
+    margin-top: 2%;
+}
+/* This is for any other icon file */
+.icon-of-size {
+    width: 30px;
+    height: 30px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/* This is side nav bottom links like settings and logout */
+.sidenav-bottom-cta {
+    margin-bottom: 2%;
+}
+
+/* All top nav related css */
+
+.top-nav-custom {
+    position: fixed;
+    top: 32px;
+    left: auto;
+    right: 32px;
+    background-color: rgba(229, 229, 229, 0.4);
+    padding: 16px;
+}
+
+/* Main Content properties here */
+
+/* sectional properties */
+.dashboard-home-tab {
+    padding: 40px;
+    height: 100vh; 
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+.dashboard-home-tab::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+.slack-home-tab {
+    padding: 40px;
+    height: 100%;
+    background: #2B092A;
+}
+.gcalendar-home-tab {
+    padding: 40px;
+    height: 100%;
+    background: #4285F4;
+}
+
+
+/* Things about the integration cards */
+.integration-card-header {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.integration-card {
+    width: 100% auto;
+    padding: 24px;
+    border: 2px solid #DCDCDC;
+    box-shadow: 8px 8px 12px rgba(52, 52, 52, 0.2);
+    border-radius: 8px;
+}
+.integration-card-info {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.integration-container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: auto auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 40px !important;
+    padding-left: 0px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+
+
+/* Making sidenav responsive */
+
+@media screen and (max-width: 700px) {
+    .side-nav-custom a {
+        float: left;
+        font-size: 16px;
+    }
+    .integration-container {
+    display: flex;
+    flex-direction: column;
+    }
+    .content-is-all-here {
+        margin-left: 0;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+    }
+
+    /* Shit I have to do for mobile navigation */
+    .side-nav-custom {
+        display: none;
+    }
+    .top-nav-custom {
+        display: none;
+    }
+
+    /* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #1a1a1a;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #1a1a1a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #3C64B1;
+    color  : #f9f9f9;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    color: white;
+    background-color: #3C64B1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .side-nav-custom a{
+        text-align: center;
+        float: none;
+        font-size: 16px;
+
+    }
+    .side-nav-custom {
+        display: none;
+    }
+
+    .integration-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .content-is-all-here {
+            margin-left: 0;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+    }
+    .side-nav-link-container {
+        display: none;
+    }
+    .sidenav-bottom-cta {
+        display: none;
+    }
+    .top-nav-custom {
+        display: none;
+    }
+
+    /* Shit I have to do for mobile navigation */
+    /* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: #1a1a1a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #3C64B1;
+    color: #f9f9f9;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    background-color: #3C64B1;
+    color: white;
+  }
+}
